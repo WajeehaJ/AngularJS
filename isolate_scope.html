@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Isolating Scopes in AngularJS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.css">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="directive.js"></script>
+</head>
+<body>
+<div ng-app="directivesModule" ng-controller="CustomersController">
+
+    <div my-isolated-scope=""
+     customer="customer"
+     action="changeData()">
+</div>
+
+</div>
+
+</body>
+</html>

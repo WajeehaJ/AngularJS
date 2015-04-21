@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <title>ng-class</title>
+
+	<meta charset="utf-8"/>
+	<meta name="application-name" content="ng-class example"/>
+
+	<style>
+		.redBg{
+			background-color: tomato;
+		}
+		.greenBg{
+			background-color: lightgreen;
+		}
+		.greyBg{
+			background-color: grey;
+		}
+		.blueFont{
+			color: blue;
+		}
+	</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	<script src="myController.js"> </script>
+</head>
+
+<body ng-app="mainApp" ng-controller="MyCtrl">
+
+
+	<!-- =====================================================================
+	Another example of how to use ng-class
+	====================================================================== -->
+	<br/><br/><br/>
+	<span> Choose a theme to highlight paragraph below &nbsp;&nbsp;&nbsp;</span>
+	<select ng-model="selectedTheme">
+		<option value="{{css}}" ng-repeat="(themeName,css) in styleSet">{{themeName}}</option>
+	</select>
+
+	<p ng-class="selectedTheme">Theme is applied on this text</p>
+</body>
+</html>
